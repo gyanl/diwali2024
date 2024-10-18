@@ -9,8 +9,7 @@
 
     <meta property="og:title" content="Pre-Diwali Teen Patti | 18 October 2024" />
     <meta name="image" property="og:image" content="thumbnail.png" />
-    <meta property="og:description"
-        content='Samosas & Pakoras | Get Booze & Flowers' />
+    <meta property="og:description" content='Samosas & Pakoras | Get Booze & Flowers' />
     <meta property="og:url" content="www.chauciao.com" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
@@ -61,8 +60,6 @@
 
         body {
             margin: 0;
-            display: grid;
-            place-items: center;
             min-height: 100vh;
             background: url('splatter.jpg');
             background-repeat: repeat-y;
@@ -73,10 +70,15 @@
             color: var(--yellow);
         }
 
+        .main-content {
+            display: grid;
+            place-items: center;
+        }
+
         .pattern {
             position: relative;
             width: 0;
-            height: 0;
+            height: 200px;
             animation: fireworkRotate var(--main-rotation-duration) ease-in-out infinite;
         }
 
@@ -288,6 +290,21 @@
             font-weight: 105;
         }
 
+        .question {
+            font-weight: 130;
+        }
+
+        .answer {
+            font-weight: 100;
+            margin-bottom: 20px;
+        }
+
+        .faq-container {
+            margin: 20px;
+            font-size: 16px;
+        }
+
+
 
         /* for mobile */
         @media (max-width: 500px) {
@@ -317,141 +334,160 @@
 
 <body>
 
-    <div class="top-content">
+    <div class="main-content">
 
-        <div class="section">
-            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0ABEGIN:VEVENT%0D%0AUID:uid1@example.com%0D%0ADTSTAMP:20241018T150000Z%0D%0AORGANIZER;CN=Casa%20Chauciao%0D%0ADTSTART:20241018T150000Z%0D%0ADTEND:20241018T173000Z%0D%0ASUMMARY:Pre%20Diwali%20Teen%20Patti%0D%0ALOCATION:Casa%20Chauciao%0D%0ADESCRIPTION:Top%20Floor%20Barsati,%209203A,%20C9%20Vasant%20Kunj,%20New%20Delhi%20https://maps.app.goo.gl/KUQ3bacxSaG1eD8D6%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR"
-                download="event.ics">
-                <div class="button">Add to Calendar &#8599;</div>
-            </a>
-            <a href="https://maps.app.goo.gl/KUQ3bacxSaG1eD8D6">
-                <div class="button">Google Maps &#8599;</div>
-            </a>
+        <div class="top-content">
+
+            <div class="section">
+                <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0ABEGIN:VEVENT%0D%0AUID:uid1@example.com%0D%0ADTSTAMP:20241018T150000Z%0D%0AORGANIZER;CN=Casa%20Chauciao%0D%0ADTSTART:20241018T150000Z%0D%0ADTEND:20241018T173000Z%0D%0ASUMMARY:Pre%20Diwali%20Teen%20Patti%0D%0ALOCATION:Casa%20Chauciao%0D%0ADESCRIPTION:Top%20Floor%20Barsati,%209203A,%20C9%20Vasant%20Kunj,%20New%20Delhi%20https://maps.app.goo.gl/KUQ3bacxSaG1eD8D6%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR"
+                    download="event.ics">
+                    <div class="button">Add to Calendar &#8599;</div>
+                </a>
+                <a href="https://maps.app.goo.gl/KUQ3bacxSaG1eD8D6">
+                    <div class="button">Google Maps &#8599;</div>
+                </a>
+            </div>
+
+            <div class="section">
+                <div class="left">
+                    <p>SAMOSAS AND PAKORAS</p>
+                </div>
+                <div class="right">
+                    <p>& OTHER SNACKS</p>
+                </div>
+            </div>
+
+            <div class="section">
+
+                <div class="left">
+                    <p>@ CASA CHAUCIAO</p>
+                </div>
+
+
+                <div class="right">
+                    <p>9203A, C9 VASANT KUNJ</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="left">
+                    <p>GET BOOZE AND FLOWERS</p>
+                </div>
+                <div class="right">
+                    <p>NO PARKING</p>
+                </div>
+            </div>
+
         </div>
 
-        <div class="section">
-            <div class="left">
-                <p>SAMOSAS AND PAKORAS</p>
+        <div class="pattern">
+            <div class="line">
+                <div class="circle" style="--i: 0"></div>
+                <div class="circle" style="--i: 1"></div>
+                <div class="circle" style="--i: 2"></div>
+                <div class="circle" style="--i: 3"></div>
+                <div class="circle" style="--i: 4"></div>
+                <div class="circle" style="--i: 5"></div>
+                <div class="circle" style="--i: 6"></div>
+                <div class="circle" style="--i: 7"></div>
             </div>
-            <div class="right">
-                <p>& OTHER SNACKS</p>
+            <!-- Repeated for all 8 arms -->
+            <div class="line">
+                <div class="circle" style="--i: 0"></div>
+                <div class="circle" style="--i: 1"></div>
+                <div class="circle" style="--i: 2"></div>
+                <div class="circle" style="--i: 3"></div>
+                <div class="circle" style="--i: 4"></div>
+                <div class="circle" style="--i: 5"></div>
+                <div class="circle" style="--i: 6"></div>
+                <div class="circle" style="--i: 7"></div>
+            </div>
+            <div class="line">
+                <div class="circle" style="--i: 0"></div>
+                <div class="circle" style="--i: 1"></div>
+                <div class="circle" style="--i: 2"></div>
+                <div class="circle" style="--i: 3"></div>
+                <div class="circle" style="--i: 4"></div>
+                <div class="circle" style="--i: 5"></div>
+                <div class="circle" style="--i: 6"></div>
+                <div class="circle" style="--i: 7"></div>
+            </div>
+            <div class="line">
+                <div class="circle" style="--i: 0"></div>
+                <div class="circle" style="--i: 1"></div>
+                <div class="circle" style="--i: 2"></div>
+                <div class="circle" style="--i: 3"></div>
+                <div class="circle" style="--i: 4"></div>
+                <div class="circle" style="--i: 5"></div>
+                <div class="circle" style="--i: 6"></div>
+                <div class="circle" style="--i: 7"></div>
+            </div>
+            <div class="line">
+                <div class="circle" style="--i: 0"></div>
+                <div class="circle" style="--i: 1"></div>
+                <div class="circle" style="--i: 2"></div>
+                <div class="circle" style="--i: 3"></div>
+                <div class="circle" style="--i: 4"></div>
+                <div class="circle" style="--i: 5"></div>
+                <div class="circle" style="--i: 6"></div>
+                <div class="circle" style="--i: 7"></div>
+            </div>
+            <div class="line">
+                <div class="circle" style="--i: 0"></div>
+                <div class="circle" style="--i: 1"></div>
+                <div class="circle" style="--i: 2"></div>
+                <div class="circle" style="--i: 3"></div>
+                <div class="circle" style="--i: 4"></div>
+                <div class="circle" style="--i: 5"></div>
+                <div class="circle" style="--i: 6"></div>
+                <div class="circle" style="--i: 7"></div>
+            </div>
+            <div class="line">
+                <div class="circle" style="--i: 0"></div>
+                <div class="circle" style="--i: 1"></div>
+                <div class="circle" style="--i: 2"></div>
+                <div class="circle" style="--i: 3"></div>
+                <div class="circle" style="--i: 4"></div>
+                <div class="circle" style="--i: 5"></div>
+                <div class="circle" style="--i: 6"></div>
+                <div class="circle" style="--i: 7"></div>
+            </div>
+            <div class="line">
+                <div class="circle" style="--i: 0"></div>
+                <div class="circle" style="--i: 1"></div>
+                <div class="circle" style="--i: 2"></div>
+                <div class="circle" style="--i: 3"></div>
+                <div class="circle" style="--i: 4"></div>
+                <div class="circle" style="--i: 5"></div>
+                <div class="circle" style="--i: 6"></div>
+                <div class="circle" style="--i: 7"></div>
             </div>
         </div>
 
-        <div class="section">
-
-            <div class="left">
-                <p>@ CASA CHAUCIAO</p>
-            </div>
-
-
-            <div class="right">
-                <p>9203A, C9 VASANT KUNJ</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="left">
-                <p>GET BOOZE AND FLOWERS</p>
-            </div>
-            <div class="right">
-                <p>NO PARKING</p>
+        <div class="bottom-content">
+            <div class="center">
+                <p>PRE DIWALI TEEN PATTI </p>
+                <p>18/OCTOBER/2024</p>
+                <p>8:30 PM ONWARDS</p>
+                <p></p>
             </div>
         </div>
 
     </div>
 
-    <div class="pattern">
-        <div class="line">
-            <div class="circle" style="--i: 0"></div>
-            <div class="circle" style="--i: 1"></div>
-            <div class="circle" style="--i: 2"></div>
-            <div class="circle" style="--i: 3"></div>
-            <div class="circle" style="--i: 4"></div>
-            <div class="circle" style="--i: 5"></div>
-            <div class="circle" style="--i: 6"></div>
-            <div class="circle" style="--i: 7"></div>
+    <div class="faq-container">
+        <div class="question">Finding the house</div>
+        <div class="answer">9203A is the barsati on the 4th (top floor) of the building. Please do not ring at 9203, which is on the 3rd floor.
         </div>
-        <!-- Repeated for all 8 arms -->
-        <div class="line">
-            <div class="circle" style="--i: 0"></div>
-            <div class="circle" style="--i: 1"></div>
-            <div class="circle" style="--i: 2"></div>
-            <div class="circle" style="--i: 3"></div>
-            <div class="circle" style="--i: 4"></div>
-            <div class="circle" style="--i: 5"></div>
-            <div class="circle" style="--i: 6"></div>
-            <div class="circle" style="--i: 7"></div>
-        </div>
-        <div class="line">
-            <div class="circle" style="--i: 0"></div>
-            <div class="circle" style="--i: 1"></div>
-            <div class="circle" style="--i: 2"></div>
-            <div class="circle" style="--i: 3"></div>
-            <div class="circle" style="--i: 4"></div>
-            <div class="circle" style="--i: 5"></div>
-            <div class="circle" style="--i: 6"></div>
-            <div class="circle" style="--i: 7"></div>
-        </div>
-        <div class="line">
-            <div class="circle" style="--i: 0"></div>
-            <div class="circle" style="--i: 1"></div>
-            <div class="circle" style="--i: 2"></div>
-            <div class="circle" style="--i: 3"></div>
-            <div class="circle" style="--i: 4"></div>
-            <div class="circle" style="--i: 5"></div>
-            <div class="circle" style="--i: 6"></div>
-            <div class="circle" style="--i: 7"></div>
-        </div>
-        <div class="line">
-            <div class="circle" style="--i: 0"></div>
-            <div class="circle" style="--i: 1"></div>
-            <div class="circle" style="--i: 2"></div>
-            <div class="circle" style="--i: 3"></div>
-            <div class="circle" style="--i: 4"></div>
-            <div class="circle" style="--i: 5"></div>
-            <div class="circle" style="--i: 6"></div>
-            <div class="circle" style="--i: 7"></div>
-        </div>
-        <div class="line">
-            <div class="circle" style="--i: 0"></div>
-            <div class="circle" style="--i: 1"></div>
-            <div class="circle" style="--i: 2"></div>
-            <div class="circle" style="--i: 3"></div>
-            <div class="circle" style="--i: 4"></div>
-            <div class="circle" style="--i: 5"></div>
-            <div class="circle" style="--i: 6"></div>
-            <div class="circle" style="--i: 7"></div>
-        </div>
-        <div class="line">
-            <div class="circle" style="--i: 0"></div>
-            <div class="circle" style="--i: 1"></div>
-            <div class="circle" style="--i: 2"></div>
-            <div class="circle" style="--i: 3"></div>
-            <div class="circle" style="--i: 4"></div>
-            <div class="circle" style="--i: 5"></div>
-            <div class="circle" style="--i: 6"></div>
-            <div class="circle" style="--i: 7"></div>
-        </div>
-        <div class="line">
-            <div class="circle" style="--i: 0"></div>
-            <div class="circle" style="--i: 1"></div>
-            <div class="circle" style="--i: 2"></div>
-            <div class="circle" style="--i: 3"></div>
-            <div class="circle" style="--i: 4"></div>
-            <div class="circle" style="--i: 5"></div>
-            <div class="circle" style="--i: 6"></div>
-            <div class="circle" style="--i: 7"></div>
-        </div>
-    </div>
 
-    <div class="bottom-content">
-        <div class="center">
-            <p>PRE DIWALI TEEN PATTI </p>
-            <p>18/OCTOBER/2024</p>
-            <p>8:30 PM ONWARDS</p>
-            <p></p>
+        <div class="question">Parking situation?</div>
+        <div class="answer">There is a parking shortage in the C9 block. All spots inside the complex are reserved for
+            residents and we've had issues with visitors getting their cars blocked by irate residents. If you do get
+            your car, please park outside <a href="https://maps.app.goo.gl/q1WVyJDBuUDLHVt36">C9 Gate 1</a> and walk 2-3 minutes till the house.
         </div>
+
+        <div class="question">Closest thekas?</div>
+        <div class="answer">Basant Lok market near Perch.</div>
     </div>
 
 </body>
