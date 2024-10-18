@@ -56,6 +56,9 @@
             /* Calculated values */
             --circle-overlap: -120px;
             --arm-offset: calc(var(--arm-length) / -2);
+
+            --question-font-size: 18px;
+            --answer-font-size: 16px;
         }
 
         body {
@@ -68,6 +71,8 @@
             font-weight: 140;
             font-size: 24px;
             color: var(--yellow);
+            overflow-x: hidden;
+            padding: 5% 20%;
         }
 
         .main-content {
@@ -224,7 +229,6 @@
         .top-content {
             display: flex;
             justify-content: space-between;
-            padding: 20px;
             flex-direction: column;
             line-height: .6;
             margin-top: 0;
@@ -292,31 +296,60 @@
 
         .question {
             font-weight: 130;
+            margin-bottom: 6px;
+            font-size: var(--question-font-size);
+            padding-top: 12px;
+            color: #000;
         }
 
         .answer {
             font-weight: 100;
-            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--yellow);
+        }
+
+        .answer:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
         .faq-container {
             margin: 20px;
-            font-size: 16px;
+            font-size: var(--answer-font-size);
         }
 
+        .faq-container .answer a {
+            color: #000;
+            background-color: var(--yellow);
+            border-radius: 3px;
+            border: 2px solid var(--yellow);
+            text-decoration: none;
+            font-size: var(--answer-font-size);
+            padding: 0 3px;
+        }
+
+        .faq-container .answer a:after {
+            content: ' ↗';
+        }
+
+        img {
+            border-radius: 3px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            width: 100%;
+        }
 
 
         /* for mobile */
         @media (max-width: 500px) {
             body {
-                background: url('splatter-mobile.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
+                background: var(--orange);
+                padding: 0;
             }
 
             .top-content {
                 line-height: 1.1;
+                padding: 0px;
             }
 
             .top-content p {
@@ -328,13 +361,19 @@
                 font-size: 30px;
             }
 
+            .main-content {
+                background: url('splatter-mobile.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="main-content">
+    <div class="faq-container">
 
         <div class="top-content">
 
@@ -379,6 +418,29 @@
             </div>
 
         </div>
+
+        <div class="question">Finding the house</div>
+        <div class="answer">9203A is the barsati on the 4th (top floor) of the building. Please do not ring at 9203,
+            which is on the 3rd floor.
+            <img src="https://gyanl.com/assets/vk-entry.jpg">
+        </div>
+
+        <div class="question">Parking situation?</div>
+        <div class="answer">There is a parking shortage in the C9 block. All spots inside the complex are reserved for
+            residents and we've had issues with visitors getting their cars blocked by irate residents.<p>If you do get
+            your car, please park outside <a href="https://maps.app.goo.gl/q1WVyJDBuUDLHVt36">C9 Gate 1</a> and walk 2-3
+            minutes till the house.
+        </div>
+
+        <div class="question">Closest thekas?</div>
+        <div class="answer"><a href="https://maps.app.goo.gl/a9XQEdkbVXdphyzv7">Liquor Mart</a> in Basant Lok market
+            <p><a href="https://maps.app.goo.gl/A93AFuYuaxw5nMd17">Government Wine and Beer Shop</a> in Vasant Kunj
+        </div>
+    </div>
+
+    <div class="main-content">
+
+
 
         <div class="pattern">
             <div class="line">
@@ -475,20 +537,7 @@
 
     </div>
 
-    <div class="faq-container">
-        <div class="question">Finding the house</div>
-        <div class="answer">9203A is the barsati on the 4th (top floor) of the building. Please do not ring at 9203, which is on the 3rd floor.
-        </div>
 
-        <div class="question">Parking situation?</div>
-        <div class="answer">There is a parking shortage in the C9 block. All spots inside the complex are reserved for
-            residents and we've had issues with visitors getting their cars blocked by irate residents. If you do get
-            your car, please park outside <a href="https://maps.app.goo.gl/q1WVyJDBuUDLHVt36">C9 Gate 1</a> and walk 2-3 minutes till the house.
-        </div>
-
-        <div class="question">Closest thekas?</div>
-        <div class="answer">Basant Lok market near Perch.</div>
-    </div>
 
 </body>
 
